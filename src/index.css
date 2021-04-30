@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+  background-color: #373b69;
+}
+
+h1 {
+  margin: 1rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+h4 {
+  margin: 0.1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.search {
+  background-color: #3c427b;
+  border: 2px solid #e4e4e4;
+  border-radius: 50px;
+  margin: 0.35rem 0;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+  outline: none;
+}
+
+.search:active {
+  outline: none;
+}
+
+.search::placeholder {
+  color: #fff;
+}
+
+.app-con {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  grid-gap: 1.3rem;
+  max-width: 1440px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.games {
+  width: 100%;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.games img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.info {
+  background-color: #3c427b;
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  color: #fff;
+}
+
+.info .det {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  overflow: scroll;
+  background-color: #e4e4e4;
+  padding: 0.5rem;
+  transform: translateX(102%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.games:hover .desc {
+  transform: translateX(0);
+}
+
+@media (max-width: 950px) {
+  .app-con {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search {
+    border-radius: 30px;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+    color: #000;
+  }
+}
+
+@media (max-width: 500px) {
+  .app-con {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    justify-content: center;
+    align-items: center;
+  }
+}
